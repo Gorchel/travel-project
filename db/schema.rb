@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150806111349) do
+ActiveRecord::Schema.define(version: 20150806112548) do
+
+  create_table "castles", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cities", force: :cascade do |t|
     t.string   "name"
@@ -20,8 +29,86 @@ ActiveRecord::Schema.define(version: 20150806111349) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "museums", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "natures", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "other_architectures", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "palaces", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string   "name"
+    t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "regions", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.string   "about"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stones", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "traditions", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "region_id"
+    t.string   "about"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "woodens", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "century"
+    t.integer  "region_id"
+    t.integer  "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
