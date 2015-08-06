@@ -3,10 +3,12 @@ class CreateOtherArchitectures < ActiveRecord::Migration
     create_table :other_architectures do |t|
       t.string :name
       t.integer :century
-      t.integer :region_id
-      t.integer :city_id
+      t.references :region
+      t.references :city
 
       t.timestamps null: false
     end
+    add_index :other_architectures, :region_id
+    add_index :other_architectures, :city_id
   end
 end

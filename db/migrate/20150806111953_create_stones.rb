@@ -3,10 +3,12 @@ class CreateStones < ActiveRecord::Migration
     create_table :stones do |t|
       t.string :name
       t.integer :century
-      t.integer :region_id
-      t.integer :city_id
+      t.references :region
+      t.references :city
 
       t.timestamps null: false
     end
+    add_index :stones, :region_id
+    add_index :stones, :city_id
   end
 end

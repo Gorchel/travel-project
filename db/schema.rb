@@ -22,12 +22,17 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "castles", ["city_id"], name: "index_castles_on_city_id"
+  add_index "castles", ["region_id"], name: "index_castles_on_region_id"
+
   create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.integer  "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "cities", ["region_id"], name: "index_cities_on_region_id"
 
   create_table "museums", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +43,9 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "museums", ["city_id"], name: "index_museums_on_city_id"
+  add_index "museums", ["region_id"], name: "index_museums_on_region_id"
+
   create_table "natures", force: :cascade do |t|
     t.string   "name"
     t.integer  "century"
@@ -46,6 +54,9 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "natures", ["city_id"], name: "index_natures_on_city_id"
+  add_index "natures", ["region_id"], name: "index_natures_on_region_id"
 
   create_table "other_architectures", force: :cascade do |t|
     t.string   "name"
@@ -56,6 +67,9 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "other_architectures", ["city_id"], name: "index_other_architectures_on_city_id"
+  add_index "other_architectures", ["region_id"], name: "index_other_architectures_on_region_id"
+
   create_table "palaces", force: :cascade do |t|
     t.string   "name"
     t.integer  "century"
@@ -64,6 +78,9 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "palaces", ["city_id"], name: "index_palaces_on_city_id"
+  add_index "palaces", ["region_id"], name: "index_palaces_on_region_id"
 
   create_table "people", force: :cascade do |t|
     t.string   "name"
@@ -87,6 +104,8 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "routes", ["region_id"], name: "index_routes_on_region_id"
+
   create_table "stones", force: :cascade do |t|
     t.string   "name"
     t.integer  "century"
@@ -96,6 +115,9 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "updated_at", null: false
   end
 
+  add_index "stones", ["city_id"], name: "index_stones_on_city_id"
+  add_index "stones", ["region_id"], name: "index_stones_on_region_id"
+
   create_table "traditions", force: :cascade do |t|
     t.string   "name"
     t.integer  "region_id"
@@ -103,6 +125,8 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "traditions", ["region_id"], name: "index_traditions_on_region_id"
 
   create_table "woodens", force: :cascade do |t|
     t.string   "name"
@@ -112,5 +136,8 @@ ActiveRecord::Schema.define(version: 20150806112548) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "woodens", ["city_id"], name: "index_woodens_on_city_id"
+  add_index "woodens", ["region_id"], name: "index_woodens_on_region_id"
 
 end
