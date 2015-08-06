@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TravelProject</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+
+<body>
+	<!--Хедер-->
+	<header class="container">
+		<div id="header-block" class="row">
+
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+				<p>Турістична бібліотека України</p>
+			</div>
+			
+			<div id="language-register-site" class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-push-4 col-md-4 col-md-offset-0 col-lg-push-5 col-lg-offset-0 col-lg-3">
+				<div class="row">
+					<div class="col-xs-2 col-xs-offset-2"><span>Укр</span></div>
+					<div class="col-xs-2"><span>Рус</span></div>
+					<div class="col-xs-2"><span>Eng</span></div>
+					<div class="col-xs-2"><span>Pol</span></div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-3"><span>Рээстрація</span></div>
+					<div class="col-xs-2"><span>Вхід</span></div>
+				</div>
+			</div>
+
+			<div id="search_site" class="col-xs-12 col-sm-4 col-md-offset-0 col-md-pull-4 col-md-4 col-lg-pull-3 col-lg-offset-2 col-lg-3">		
+				<input type="text" placeholder="Пошук...">	
+				<span class="glyphicon glyphicon-search"></span>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse" id="responsive-menu">
+						<ul class="nav navbar-nav">
+							<li><a href="#">Новини</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Пам'ятки
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+			                        <li><a href="#">Кам'янi храми</a></li>
+			                        <li><a href="#">Дерев'янi храми</a></li>
+			                        <li><a href="#">Замки та фортецi</a></li>
+			                        <li><a href="#">Палаци та садиби</a></li>
+			                        <li><a href="#">Природа</a></li>
+			                        <li><a href="#">Iнша архiтектура</a></li>
+			                        <li><a href="#">Музеї</a></li>
+                          		</ul>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Мiста
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+			                        <li><a href="#">Вiнничина</a></li>
+			                        <li><a href="#">Волинь</a></li>
+			                        <li><a class="divider"></a></li>
+                          		</ul>
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+									Маршрути
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+			                        <li><a href="#">По мiстах</a></li>
+			                        <li><a href="#">До природи</a></li>
+			                        <li><a href="#">У гори</a></li>
+			                        <li><a href="#">Iсторичнi</a></li>
+			                        <li><a href="#">На вихiднi</a></li>
+                          		</ul>
+							</li>
+							<li><a href="#">Подiї</a></li>
+							<li><a href="#">Традiцiї</a></li>
+							<li><a href="#">Люди</a></li>
+							<li><a href="#">Вiдео</a></li>
+							<li><a href="#">Контакти</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!--Контент-->
+	<div class="container" id="content">
+		<%= yield %>
+	</div>
+	
+	<!--Контейнер-->
+	<footer class="container">
+		<div class="row">
+			<div id="social" class="col-xs-12 col-sm-8">
+				<div class="col-xs-12 col-sm-4" id="footer-facebook">
+					<%= image_tag "facebook.jpeg" %>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="footer-facebook">
+					<%= image_tag "vk.jpeg" %>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="footer-facebook">
+					<%= image_tag "twitter.jpeg" %>
+				</div>
+			</div>
+			<div id="footer-info" class="col-xs-12 col-sm-4">
+				<p>Замовити маршрут</p>
+				<p>Додати iнформацiю на сайт</p>
+				<p>Отримувати новини на email</p>
+				<p>Вiдео</p>	
+			</div>
+			<div id="about-site" class="col-xs-12">
+				<p>При використиннi матерiалiв сайту обов'язковою умовою э наявнiсть гiперпосилання iз зазначенням <a href="#">yourway.in.ua</a></p>
+				<p>Розробка сайту <a href="http://pixelparty.ru">pixelparty.ru</a></p>
+				<p>
+					<span class="glyphicon glyphicon-copyright-mark"></span>
+					2015 Україна
+				</p>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
