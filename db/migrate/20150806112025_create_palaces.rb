@@ -2,7 +2,7 @@ class CreatePalaces < ActiveRecord::Migration
   def change
     create_table :palaces do |t|
       t.string :name
-      t.integer :century
+      t.string :century
       t.references :region
       t.references :city
 

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "castles", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "museums", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "natures", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "other_architectures", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "palaces", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -108,7 +108,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "stones", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 20150806112548) do
 
   create_table "woodens", force: :cascade do |t|
     t.string   "name"
-    t.integer  "century"
+    t.string   "century"
     t.integer  "region_id"
     t.integer  "city_id"
     t.datetime "created_at", null: false

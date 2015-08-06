@@ -2,7 +2,7 @@ class CreateNatures < ActiveRecord::Migration
   def change
     create_table :natures do |t|
       t.string :name
-      t.integer :century
+      t.string :century
       t.references :region
       t.references :city
 

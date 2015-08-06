@@ -1,4 +1,4 @@
 class Nature < ActiveRecord::Base
-	has_many :citys
-	has_many :regions
+	belongs_to :city
+	belongs_to :region
 end

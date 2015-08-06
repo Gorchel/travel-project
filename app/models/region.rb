@@ -1,3 +1,3 @@
 class Region < ActiveRecord::Base
-	belongs_to :nature
+	has_many :natures
 end

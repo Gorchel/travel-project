@@ -2,7 +2,7 @@ class CreateMuseums < ActiveRecord::Migration
   def change
     create_table :museums do |t|
       t.string :name
-      t.integer :century
+      t.string :century
       t.references :region
       t.references :city
 
