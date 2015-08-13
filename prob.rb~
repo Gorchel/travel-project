@@ -1,0 +1,5 @@
+city_list = [ "Herson" ,"Lvov" ,"Odessa" ,"Kiev" ]
+
+4.times do |i|
+	puts city_list[i]
+end
