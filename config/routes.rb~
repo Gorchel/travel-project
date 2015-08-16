@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   get 'route/weekend'
 
-  get 'town/volin'
+  get 'city/Volin'
 
-  get 'town/vinnichina'
+  get 'city/Vinnichina'
 
   get 'monuments/stone'
 

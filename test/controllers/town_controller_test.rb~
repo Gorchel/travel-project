@@ -1,0 +1,14 @@
+require 'test_helper'
+
+class CityControllerTest < ActionController::TestCase
+  test "should get Volin" do
+    get :Volin
+    assert_response :success
+  end
+
+  test "should get Vinnichina" do
+    get :Vinnichina
+    assert_response :success
+  end
+
+end

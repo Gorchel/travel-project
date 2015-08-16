@@ -50,20 +50,20 @@
 					</div>
 					<div class="collapse navbar-collapse" id="responsive-menu">
 						<ul class="nav navbar-nav">
-							<li><a href="#">Новини</a></li>
+							<li><%= link_to "Новини", news_news_path %></li>
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 									Пам'ятки
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-			                        <li><a href="#">Кам'янi храми</a></li>
-			                        <li><a href="#">Дерев'янi храми</a></li>
-			                        <li><a href="#">Замки та фортецi</a></li>
-			                        <li><a href="#">Палаци та садиби</a></li>
-			                        <li><a href="#">Природа</a></li>
-			                        <li><a href="#">Iнша архiтектура</a></li>
-			                        <li><a href="#">Музеї</a></li>
+			                        <li><%= link_to "Кам'янi храми", monuments_stone_path %></li>
+			                        <li><%= link_to "Дерев'янi храми", monuments_wooden_path %></li>
+			                        <li><%= link_to "Замки та фортецi", monuments_castle_path %></li>
+			                        <li><%= link_to "Палаци та садиби", monuments_palace_path %></li>
+			                        <li><%= link_to "Природа", monuments_nature_path %></li>
+			                        <li><%= link_to "Музеї", monuments_museum_path %></li>
+			                        <li><%= link_to "Iнша архiтектура", monuments_other_path %></li>			                     
                           		</ul>
 							</li>
 							<li class="dropdown">
@@ -72,9 +72,8 @@
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-			                        <li><a href="#">Вiнничина</a></li>
-			                        <li><a href="#">Волинь</a></li>
-			                        <li><a class="divider"></a></li>
+			                        <li><%= link_to "Вiнничина", town_vinnichina_path %></li>
+			                        <li><%= link_to "Волинь", town_volin_path %></li>
                           		</ul>
 							</li>
 							<li class="dropdown">
@@ -83,18 +82,18 @@
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-			                        <li><a href="#">По мiстах</a></li>
-			                        <li><a href="#">До природи</a></li>
-			                        <li><a href="#">У гори</a></li>
-			                        <li><a href="#">Iсторичнi</a></li>
-			                        <li><a href="#">На вихiднi</a></li>
+			                        <li><%= link_to "По мiстах", route_city_path %></li>
+			                        <li><%= link_to "До природи", route_nature_path %></li>
+			                        <li><%= link_to "У гори", route_mountain_path %></li>
+			                        <li><%= link_to "Iсторичнi", route_history_path %></li>
+			                        <li><%= link_to "На вихiднi", route_weekend_path %></li>
                           		</ul>
 							</li>
-							<li><a href="#">Подiї</a></li>
-							<li><a href="#">Традiцiї</a></li>
-							<li><a href="#">Люди</a></li>
-							<li><a href="#">Вiдео</a></li>
-							<li><a href="#">Контакти</a></li>
+							<li><%= link_to "Подiї", development_development_path %></li>
+							<li><%= link_to "Традiцiї", tradition_tradition_path %></li>
+							<li><%= link_to "Люди", people_people_path %></li>
+							<li><%= link_to "Вiдео", video_video_path %></li>
+							<li><%= link_to "Контакти", contact_contact_path %></li>
 						</ul>
 					</div>
 				</div>

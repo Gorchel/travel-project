@@ -1,0 +1,7 @@
+class CityController < ApplicationController
+  def Volin
+  end
+
+  def Vinnichina
+  end
+end
